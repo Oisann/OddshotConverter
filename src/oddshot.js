@@ -51,7 +51,7 @@ var fetchOnce = exports.fetchOnce = function(data, post) {
                      var ytUrl = 'https://youtu.be/' + up.id;
                      post.updateAttributes({mirror: ytUrl});
 
-                     reddit.comment(data.data.name, '[YouTube Mirror](' + ytUrl + ')\n****\n^I ^am ^a ^bot. ^Feel ^free ^to ^send ^me ^any ^bugs/suggestions/comments!  \n^[github](https://github.com/nicememe/oddshotconverter) ^- ^[contact](https://keybase.io/pawd) ^- ^[faq](https://np.reddit.com/r/OddshotBot/wiki/faq)', function (err, comment) {
+                     reddit.comment(data.data.name, '[YouTube Mirror](' + ytUrl + ')\n****\n^I ^am ^a ^bot. ^Feel ^free ^to ^send ^me ^any ^bugs/suggestions/comments!  \n^[github](https://github.com/nicememe/oddshotconverter) ^- ^[contact](https://keybase.io/pawd) ^- ^[faq](https://np.reddit.com/r/OddshotBot/wiki/faq) ^- ^[tampermonkey script](https://raw.githubusercontent.com/nicememe/OddshotConverter/master/OddshotBot.user.js)', function (err, comment) {
                         if (err) {
                            helper.errorHandler('Failed to comment. Error: ' + err);
                            post.updateAttributes({commentId: err});
